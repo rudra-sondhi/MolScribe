@@ -7,10 +7,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 
-from dataset import get_transforms
-from model import Encoder, Decoder
-from chemistry import convert_graph_to_smiles
-from tokenizer import get_tokenizer
+from .dataset import get_transforms
+from .model import Encoder, Decoder
+from .chemistry import convert_graph_to_smiles
+from .tokenizer import get_tokenizer
 
 
 BOND_TYPES = ["", "single", "double", "triple", "aromatic", "solid wedge", "dashed wedge"]

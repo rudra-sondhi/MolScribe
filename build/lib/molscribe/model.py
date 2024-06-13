@@ -6,26 +6,10 @@ import torch.nn.functional as F
 
 import timm
 
-from utils import to_device
+from utils import FORMAT_INFO, to_device
 from tokenizer import SOS_ID, EOS_ID, PAD_ID, MASK_ID
 from inference import GreedySearch, BeamSearch
 from transformer import TransformerDecoder, Embeddings
-
-FORMAT_INFO = {
-    "inchi": {
-        "name": "InChI_text",
-        "tokenizer": "tokenizer_inchi.json",
-        "max_len": 300
-    },
-    "atomtok": {
-        "name": "SMILES_atomtok",
-        "tokenizer": "tokenizer_smiles_atomtok.json",
-        "max_len": 256
-    },
-    "nodes": {"max_len": 384},
-    "atomtok_coords": {"max_len": 480},
-    "chartok_coords": {"max_len": 480}
-}
 
 
 class Encoder(nn.Module):

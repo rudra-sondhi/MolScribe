@@ -11,7 +11,7 @@ rdkit.RDLogger.DisableLog('rdApp.*')
 
 from SmilesPE.pretokenizer import atomwise_tokenizer
 
-from constants import RGROUP_SYMBOLS, ABBREVIATIONS, VALENCES, FORMULA_REGEX
+from .constants import RGROUP_SYMBOLS, ABBREVIATIONS, VALENCES, FORMULA_REGEX
 
 
 def is_valid_mol(s, format_='atomtok'):

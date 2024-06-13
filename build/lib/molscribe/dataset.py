@@ -13,14 +13,14 @@ from torch.nn.utils.rnn import pad_sequence, pack_padded_sequence
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
-from indigo import Indigo
-from indigo.renderer import IndigoRenderer
+from .indigo import Indigo
+from .indigo.renderer import IndigoRenderer
 
-from augment import SafeRotate, CropWhite, PadWhite, SaltAndPepperNoise
-from utils import FORMAT_INFO
-from tokenizer import PAD_ID
-from chemistry import get_num_atoms, normalize_nodes
-from constants import RGROUP_SYMBOLS, SUBSTITUTIONS, ELEMENTS, COLORS
+from .augment import SafeRotate, CropWhite, PadWhite, SaltAndPepperNoise
+from .utils import FORMAT_INFO
+from .tokenizer import PAD_ID
+from .chemistry import get_num_atoms, normalize_nodes
+from .constants import RGROUP_SYMBOLS, SUBSTITUTIONS, ELEMENTS, COLORS
 
 cv2.setNumThreads(1)
 
